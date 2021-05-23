@@ -7,7 +7,7 @@ const Comments = require('./CommentModel.js');
 const client = mongodb.MongoClient;
 
 dotenv.config();
-const url = process.env.DB_URL;
+const url = process.env.MONGODB_URI;
 
 const options = { 
     useUnifiedTopology: true,
