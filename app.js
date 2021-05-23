@@ -16,6 +16,7 @@ hostname = process.env.HOSTNAME;
 port = process.env.PORT;
 db_url = process.env.DB_URL;
 secret = process.env.SECRET;
+const uri = process.env.MONGODB_URI;
 
 // Register partials
 var partialsDir = __dirname + '/views/partials';
