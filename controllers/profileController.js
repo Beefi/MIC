@@ -115,7 +115,7 @@ const profileController = {
                 avatar: ".."+URL
             }
 
-            await util.promisify(file.mv)("./public"+URL);
+            await util.promisify(file.mv)("./dist"+URL);
 
             db.updateOne(Users, hiddenInfo, newInfo, function (result) {
                 if (result != null) {

@@ -79,7 +79,7 @@ const postController = {
 
             var contentPath = ".."+URL;
 
-            await util.promisify(file.mv)("./public"+URL);
+            await util.promisify(file.mv)("./dist"+URL);
 
             // Submit Post
 
