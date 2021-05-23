@@ -29,7 +29,7 @@ const profileController = {
                     followers: result.followers
                 };
 
-                req.session.refferal = '/profile/'+sessionname;
+                req.session.refferal = '/profile/'+details.sessionname;
                 res.render('profile', details);
             }
             else {
