@@ -9,6 +9,7 @@ const controller = {
 
     getSession: function (req, res) {
     	if (req.session.username) {
+            req.session.refferal = '/profile/'+req.session.username;
     		res.redirect('/profile/'+req.session.username);
     		console.log('session found user: '+req.session.username);
     	}
@@ -18,7 +19,7 @@ const controller = {
     },
 
     getBack: function (req, res) {
-        res.redirect('back');
+        res.redirect(req.session.referral);
     }
 }
 

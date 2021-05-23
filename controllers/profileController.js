@@ -29,6 +29,7 @@ const profileController = {
                     followers: result.followers
                 };
 
+                req.session.refferal = '/profile/'+sessionname;
                 res.render('profile', details);
             }
             else {
@@ -72,6 +73,8 @@ const profileController = {
                     username: result.username,
                     avatar: result.avatar
                 };
+
+                req.session.refferal = '/uploadPage/'+query.username;
 
                 res.render('uploadPage', details)
             }
@@ -141,6 +144,8 @@ const profileController = {
                     username: result.username
                 };
 
+                req.session.refferal = '/editprofile/'+query.username;
+
                 res.render('editprofile', details)
             }
             else {
@@ -203,7 +208,9 @@ const profileController = {
                     password: result.password
                 };
 
-                res.render('changepass', details)
+                req.session.refferal = '/changepassword/'+query.username;
+
+                res.render('changepass', details);
             }
             else {
                 var error = 'Cannot find profile';

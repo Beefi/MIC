@@ -6,6 +6,8 @@ const initID = 1000;
 
 const signupController = {
     getSignUp: function (req, res) {
+        req.session.refferal = '/signup';
+
         res.render('signup');
     },
 

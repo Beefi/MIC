@@ -6,6 +6,9 @@ const Comments = require('../models/CommentModel.js');
 const tunerController = {
 	getTuner: function (req,res) {
 		var username = req.session.username;
+
+		req.session.refferal = '/tuner';
+		
 		res.render('tuner', {username});
 	}
 }

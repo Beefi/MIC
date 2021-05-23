@@ -5,6 +5,7 @@ const Comments = require('../models/CommentModel.js');
 
 const metronomeController = {
 	getMetro: function (req,res) {
+		req.session.refferal = '/metronome';
 		var username = req.session.username;
 		res.render('metronome', {username});
 	}

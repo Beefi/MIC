@@ -6,6 +6,9 @@ const Comments = require('../models/CommentModel.js');
 const tabsController = {
 	getTabs: function (req,res) {
 		var username = req.session.username;
+
+		req.session.refferal = '/tabs';
+
 		res.render('tabs', {username});
 	}
 }

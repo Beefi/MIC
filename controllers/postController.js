@@ -16,6 +16,8 @@ const postController = {
 			feedname: feedname
 		}
 
+		req.session.refferal = '/feed';
+
 		res.render('feed', details);
 	},
 
@@ -27,6 +29,8 @@ const postController = {
 			sessionname: sessionname,
 			feedname: feedname
 		}
+
+		req.session.refferal = '/viewposts/'+feedname;
 
 		res.render('viewposts', details);
 	},
@@ -171,6 +175,8 @@ const postController = {
 					feedname: feedname,
 					numPosts: result.numPosts
 				}
+
+				req.session.refferal = '/makePost';
 
 				res.render('makePost', details);
 			}

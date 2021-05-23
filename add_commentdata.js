@@ -36,10 +36,40 @@ db.insertOne(Comment, comment, function(result) {
 var comment = {
 	commentID: '100510041',
 	commenterID: 1005,
-	commentNum: 2,
+	commentNum: 1,
 	postID: '10041',
 	username: 'dmitrilover',
 	content: 'Looks like Dmitri'
+};
+
+db.insertOne(Comment, comment, function(result) {
+	if (result != false) {
+		console.log("Added" + comment.username);
+	}
+});
+
+var comment = {
+	commentID: '100510041',
+	commenterID: 1005,
+	commentNum: 2,
+	postID: '10041',
+	username: 'dmitrilover',
+	content: 'Wait no'
+};
+
+db.insertOne(Comment, comment, function(result) {
+	if (result != false) {
+		console.log("Added" + comment.username);
+	}
+});
+
+var comment = {
+	commentID: '100510041',
+	commenterID: 1005,
+	commentNum: 3,
+	postID: '10041',
+	username: 'dmitrilover',
+	content: 'But maybe'
 };
 
 db.insertOne(Comment, comment, function(result) {
