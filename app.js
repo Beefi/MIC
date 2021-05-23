@@ -49,7 +49,7 @@ app.use(session({
 	saveUninitialized: false,
 	secret: secret,
 	store: MongoStore.create({
-		mongoUrl: db_url
+		mongoUrl: uri
 	})
 }));
 
