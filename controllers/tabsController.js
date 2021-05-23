@@ -7,7 +7,7 @@ const tabsController = {
 	getTabs: function (req,res) {
 		var username = req.session.username;
 
-		req.session.refferal = '/tabs';
+		req.session.referral = '/tabs';
 
 		res.render('tabs', {username});
 	}

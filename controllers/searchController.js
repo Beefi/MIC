@@ -14,7 +14,7 @@ const searchController = {
 			sessionname: sessionname,
 		}
 
-		req.session.refferal = '/sessionname';
+		req.session.referral = '/sessionname';
 
 		res.render('search', details);
 	},

@@ -4,6 +4,8 @@ const bcrypt = require('bcrypt');
 
 const loginController = {
     getLogin: function (req, res) {
+        req.session.referral = '/login';
+        
 		res.render('login');
 	},
 

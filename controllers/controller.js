@@ -9,11 +9,12 @@ const controller = {
 
     getSession: function (req, res) {
     	if (req.session.username) {
-            req.session.refferal = '/profile/'+req.session.username;
+            req.session.referral = '/profile/'+req.session.username;
     		res.redirect('/profile/'+req.session.username);
     		console.log('session found user: '+req.session.username);
     	}
     	else {
+            req.session.referral = '/login';
     		res.render('login');
     	}
     },

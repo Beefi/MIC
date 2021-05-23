@@ -9,7 +9,7 @@ const commentController = {
 		var postID = req.params.postID;
 		var sessionname = req.session.username;
 
-		req.session.refferal = '/comment/'+postID;
+		req.session.referral = '/comment/'+postID;
 
 		details = {
 			postID: postID,

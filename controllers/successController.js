@@ -6,7 +6,7 @@ const successController = {
             username: req.query.username
         };
 
-        req.session.refferal = '/success';
+        req.session.referral = '/success';
 
         res.render('success', details);
     }

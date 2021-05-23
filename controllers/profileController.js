@@ -29,7 +29,10 @@ const profileController = {
                     followers: result.followers
                 };
 
-                req.session.refferal = '/profile/'+details.sessionname;
+                req.session.referral = '/profile/'+details.sessionname;
+
+                console.log(req.session.referral);
+                
                 res.render('profile', details);
             }
             else {
@@ -74,7 +77,7 @@ const profileController = {
                     avatar: result.avatar
                 };
 
-                req.session.refferal = '/uploadPage/'+query.username;
+                req.session.referral = '/uploadPage/'+query.username;
 
                 res.render('uploadPage', details)
             }
@@ -144,7 +147,7 @@ const profileController = {
                     username: result.username
                 };
 
-                req.session.refferal = '/editprofile/'+query.username;
+                req.session.referral = '/editprofile/'+query.username;
 
                 res.render('editprofile', details)
             }
@@ -208,7 +211,7 @@ const profileController = {
                     password: result.password
                 };
 
-                req.session.refferal = '/changepassword/'+query.username;
+                req.session.referral = '/changepassword/'+query.username;
 
                 res.render('changepass', details);
             }
