@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Music App </title>
+	<link rel = "icon" href = "../images/favicon.ico" type = "image/x-icon"/>
+	<link rel = "stylesheet" href = "../css/page.css">
+	<link rel = "stylesheet" href = "../css/nav-bar.css">
+	<link rel = "stylesheet" href = "../css/metronome.css">
+</head>
+<body>
+	<div class = "nav-bar"> 
+		<ul>
+			<li><a href = "/"> Music for Inspiring Creators </a></li>
+			<li><div class = "break"></div></li>
+			<li><a href = "/feed/{{username}}">FEED</a></li>
+			<li><a href = "/profile/{{username}}">PROFILE</a></li>
+			<li><a href = "/tuner">TUNER</a></li>
+			<li><a href = "/tabs">TABS</a></li>
+			<li><a href = "/metronome"class="active">METRONOME</a></li>
+			<li><div class = "break"></div></li>
+			<li><a href = "/search"><img src = "/images/search16.png"></a></li>
+			<li><a href = "/logout">Logged in as: {{sessionname}}</a></li>
+		</ul>
+	</div>
+	<img class = "metronome" src = "images/metronome.png">
+	<h><div class = "bpm"> BPM: 140 </div></h>
+	<button class="plusbpm">+</button>
+	<button class="minusbpm">-</button>
+
+</body>
+</html>
