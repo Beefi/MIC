@@ -1,15 +1,20 @@
-const mongoose = require('mongoose')
+ const mongoose = require('mongoose')
 
 var TabsSchema = new mongoose.Schema({
 	tabsID: {
 		type: Number,
 		required: true
-	}
+	},
 
-	tabsName : {
+	tabsName: {
 		type: String,
 		required: true
-	}
+	},
+
+	tabsInstrument: {
+		type: String,
+		required: true
+	},
 
 	URL: {
 		type: String,

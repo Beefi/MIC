@@ -2,6 +2,7 @@ const db = require('../models/db.js');
 const Users = require('../models/UserModel.js');
 const Posts = require('../models/PostModel.js');
 const Comments = require('../models/CommentModel.js');
+const Tabs = require('../models/TabsModel.js');
 const path = require('path');
 const util = require('util');
 const clone = require('clone');
@@ -51,7 +52,10 @@ const searchController = {
 
 		// Search Tabs
 		if (type == 'tabs') {
-
+			var projection =  'tabsID tabsName tabsInstrument URL';
+			db.findMany(Tabs, {tabsName: {"$regex": searchQuery, "$options": "i"}}, projection, function (results) {
+				res.send(results);
+			});
 		}
 	}
 }

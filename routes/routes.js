@@ -65,6 +65,13 @@ app.get('/login', loginController.getLogin)
 app.get('/tuner', tunerController.getTuner);
 
 app.get('/tabs', tabsController.getTabs);
+app.get('/getTabsFeed', tabsController.getTabsFeed);
+
+// BEGIN TABS
+
+app.get('/tabs/:URL', tabsController.getTabsURL);
+
+// END TABS
 
 app.get('/metronome', metronomeController.getMetro);
 

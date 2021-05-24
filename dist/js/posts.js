@@ -1,4 +1,4 @@
- function showFeed() {
+function showFeed() {
 	var sessionname = $('#hiddenSessionName').val();
 	var feedname = $('#hiddenFeedName').val();
 

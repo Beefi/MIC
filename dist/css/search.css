@@ -307,3 +307,32 @@ input[type=button]:hover {
 }
 
 /* END COMMENT CSS */
+
+/* BEGIN TABS CSS */
+
+#tabs_block {
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	box-sizing: content-box;
+	width: 400px;
+	height: 70px;
+	max-height: 200px;
+	border: 5px solid white;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 10px;
+	background-color: white;
+}
+
+#tabs_name {
+	text-align: center;
+	color: rgb(86,119,108);
+	text-decoration: none;
+	font-size: 30px;
+}
+
+#tabs_instrument {
+	font-size: 20px;
+}
+
+/* END TABS CSS */

@@ -209,6 +209,35 @@ function createResults(results, type) {
 			$(commentContent).append(results[x].content);
 		}
 	}
+	else if (type == 'tabs') {
+		for (var i = numResults; i >= 0; i--) {
+			var container = document.getElementById("feed");
+			var feedbreak = document.createElement("div");
+			var tabs_block = document.createElement("div");
+			var tabs_name = document.createElement("a");
+			var tabs_instrument = document.createElement("div");
+			var divider = document.createElement("div");
+
+			// Assigning IDs
+			tabs_block.id = "tabs_block";
+			tabs_name.id = "tabs_name";
+			tabs_instrument.id = "tabs_instrument";
+			divider.id = "divider";
+			feedbreak.id = "feed-break";
+
+			tabs_name.href = "/tabs/"+results[i].URL;
+
+			$(tabs_name).text(results[i].tabsName);
+			$(tabs_instrument).text(results[i].tabsInstrument);
+
+			// Append Post Divs
+			$(container).append(tabs_block);
+			$(container).append(feedbreak);
+			$(tabs_block).append(tabs_name);
+			$(tabs_block).append(divider);
+			$(tabs_block).append(tabs_instrument);
+		}
+	}
 }
 
 

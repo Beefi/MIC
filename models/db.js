@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 const Users = require('./UserModel.js');
 const Posts = require('./PostModel.js');
 const Comments = require('./CommentModel.js');
+const Tabs = require('./TabsModel.js');
 const client = mongodb.MongoClient;
 
 dotenv.config();
