@@ -34,7 +34,8 @@ node add_commentsdata.js
 node add_tabsdata.js
 ```
 4. Press Ctrl + C to continue typing commands
-5. Then run the server with:
+5. Rename "example.env" to just ".env"
+6. Then run the server with:
 ```
 node app.js
 ```
@@ -42,6 +43,15 @@ node app.js
 ## Running Online
 
 The website can be found at: https://music-ic.herokuapp.com/
+
+## User Credentials
+
+A few users are already provided within the database but this is one blank slate that you can freely do whatever you wish:
+
+```
+Username: admin
+Password: admin1234
+```
 
 ### The project structured as such:
 
