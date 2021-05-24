@@ -106,3 +106,42 @@ db.insertOne(Tabs, tab, function(result) {
 		console.log("Added" + tab.tabsName);
 	}
 });
+
+var tab = {
+	tabsID: 9,
+	tabsName: 'Feel Good Inc.',
+	tabsInstrument: 'Bass',
+	URL: 'feel_good_inc'
+};
+
+db.insertOne(Tabs, tab, function(result) {
+	if (result != false) {
+		console.log("Added" + tab.tabsName);
+	}
+});
+
+var tab = {
+	tabsID: 10,
+	tabsName: 'Perfect',
+	tabsInstrument: 'Guitar',
+	URL: 'perfect'
+};
+
+db.insertOne(Tabs, tab, function(result) {
+	if (result != false) {
+		console.log("Added" + tab.tabsName);
+	}
+});
+
+var tab = {
+	tabsID: 11,
+	tabsName: 'Seven Nation Army',
+	tabsInstrument: 'Bass',
+	URL: 'seven_nation_army'
+};
+
+db.insertOne(Tabs, tab, function(result) {
+	if (result != false) {
+		console.log("Added" + tab.tabsName);
+	}
+});
