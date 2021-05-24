@@ -104,26 +104,40 @@ function showComments(postID) {
 }
 
 function createComments(results) {
+	var sessionname = $('#hiddenSessionname').val();
 	for (var x = 0; x < results.length; x++) {
 		var commentContainer = document.createElement("div");
 		var commentName = document.createElement("div");
+		var commentHeader = document.createElement("div");
 		var commentDivider = document.createElement("div");
 		var commentContent = document.createElement("div");
 		var commenterLink = document.createElement("a");
+		var commentDelete = document.createElement("button");
 
 		commentContainer.id = "comment-block";
+		commentHeader.id = "commentHeader";
 		commentDivider.id = "divider";
 		commentName.id = "commentName";
 		commentContent.id = "commentContent";
+		commentDelete.id = "commentDelete";
+		$(commentDelete).text("X");
 		$(commenterLink).text(results[x].username);
 		commenterLink.href = "/profile/"+results[x].username;
 
 		$(post).append(commentContainer);
-		$(commentContainer).append(commentName);
+		$(commentContainer).append(commentHeader);
+		$(commentHeader).append(commentName);
+
+		if (sessionname == results[x].username)
+			$(commentHeader).append(commentDelete);
+
 		$(commentName).append(commenterLink);
 		$(commentContainer).append(commentDivider);
 		$(commentContainer).append(commentContent);
 		$(commentContent).append(results[x].content);
+
+		if (sessionname == results[x].username)
+			createDeleteCommentEvent(commentDelete, results[x].postID, results[x].commentID);
 	}
 
 	var postID = $('#hiddenPostID').val();
@@ -200,6 +214,23 @@ function createDeleteEvent(button, postID) {
 				}
 				else {
 					alert('Post was unable to be deleted.');
+					window.location.href = window.location.href;
+				}
+			});
+		}
+	}
+}
+
+function createDeleteCommentEvent(button, postID, commentID) {
+	button.onclick = function() {
+		if (confirm("Are you sure you want to delete your comment?")) {
+			$.post('/deleteComment/'+postID+'/'+commentID, function (result) {
+				if (result) {
+					alert('Comment successfully deleted.');
+					window.location.href = window.location.href;
+				}
+				else {
+					alert('Comment was unable to be deleted.');
 					window.location.href = window.location.href;
 				}
 			});

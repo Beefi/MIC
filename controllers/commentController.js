@@ -82,6 +82,23 @@ const commentController = {
 				});
 			}
 		});
+	},
+
+	deleteComment: function (req, res) {
+		var postID = req.params.postID;
+		var username = req.session.username;
+		var commentID = req.params.commentID;
+
+		var query = {
+			commentID: commentID,
+			postID: postID,
+			username: username
+		}
+
+		db.deleteOne(Comments, query, function (result) {
+			if (result)
+				res.send(true);
+		});
 	}
 }
 

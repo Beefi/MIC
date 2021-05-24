@@ -186,3 +186,17 @@
 #delete-button:hover {
 	background-color: rgb(91,138,114);
 }
+
+#commentHeader {
+	display: flex;
+}
+
+#commentDelete {
+	margin-left: 82%;
+	background-color: rgb(86,119,108);
+	color: white;
+	font-family: BebasN;
+	font-size: 14px;
+	border: none;
+	cursor: pointer;
+}
