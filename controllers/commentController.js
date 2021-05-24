@@ -63,12 +63,15 @@ const commentController = {
 				console.log('Post ID: ' + postID);
 
 				var commenterID = result.userID;
-				var commentID = commenterID+postID;
+				var commentsNum = req.body.commentsNum;
+				commentsNum++;
+				console.log(commentsNum);
+				var commentID = commenterID+postID+commentsNum;
 
 				var comment = {
 					commentID: commentID,
 					commenterID: commenterID,
-					commentNum: req.body.commentsNum++,
+					commentNum: commentsNum,
 					postID: postID,
 					username: req.session.username,
 					content: req.body.commentAreaContent

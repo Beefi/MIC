@@ -142,14 +142,15 @@ function createComments(results) {
 
 	var postID = $('#hiddenPostID').val();
 	
-	createCommentArea();
 	$('#formPostID').attr('value', postID);
 	$('#commentsNum').attr('value', results.length);
 	$('#formPostID').attr('hidden', true);
 	$('#commentsNum').attr('hidden', true);
+
+	createCommentArea(postID, results.length);
 }
 
-function createCommentArea() {
+function createCommentArea(postID, length) {
 	var commentArea = document.createElement("div");
 	var commentForm = document.createElement("form");
 	var commentFormLabel = document.createElement("label");
@@ -185,6 +186,11 @@ function createCommentArea() {
 	$(commentForm).append(commentSubmit);
 	$(commentForm).append(formPostID);
 	$(commentForm).append(commentsNum);
+
+	$(formPostID).attr('value', postID);
+	$(commentsNum).attr('value', length);
+	$(formPostID).attr('hidden', true);
+	$(commentsNum).attr('hidden', true);
 }
 
 function createOnClickEvent(icon, postID) {
