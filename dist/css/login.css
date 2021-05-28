@@ -13,8 +13,11 @@ input {
 	outline: none;
 }
 
+.header{
+	display: flex;
+	justify-content: center;
+}
 .header-img {
-	margin-left: 805px;
 	width: 15%;
 }
 

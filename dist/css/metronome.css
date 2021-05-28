@@ -50,10 +50,11 @@
 	padding: 14px 16px;
 }
 
-.tempo-display{
+.tempo-display, .tempo-settings{
 	display: flex;
 	justify-content: center;
 }
+
 
 .start-stop {
     width: 100px;

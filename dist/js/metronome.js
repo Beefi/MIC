@@ -56,6 +56,7 @@ startStopBtn.addEventListener('click', () => {
 
 function updateMetronome() {
     tempoDisplay.textContent = bpm;
+    metronome.timeInterval = 60000 / bpm;
 }
 function validateTempo() {
     if (bpm <= 20) { return };
